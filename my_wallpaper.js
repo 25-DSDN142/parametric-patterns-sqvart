@@ -1,23 +1,21 @@
 //your parameter variables go here!
-let rect_x= 35;
 let rect_y= 0;
 let rect_width  = 300;
 let rect_height = 20;
 let circle_width = 25;
 let circle_height= 25;
-let rect_color= 1
 
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(DEVELOP_GLYPH);
-  //pWallpaper.output_mode(GRID_WALLPAPER);
+  //pWallpaper.output_mode(DEVELOP_GLYPH);
+  pWallpaper.output_mode(GRID_WALLPAPER);
   
   pWallpaper.resolution(FIT_TO_SCREEN);
-  pWallpaper.show_guide(true); //set this to false when you're ready to print
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
-  pWallpaper.grid_settings.cell_width  = 200;
-  pWallpaper.grid_settings.cell_height = 200;
-  pWallpaper.grid_settings.row_offset  = 100;
+  pWallpaper.grid_settings.cell_width  = 197;
+  pWallpaper.grid_settings.cell_height = 170;
+  pWallpaper.grid_settings.row_offset  = 99;
 }
 
 function wallpaper_background() {
@@ -25,48 +23,60 @@ function wallpaper_background() {
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
-  if (rect_color==1){ 
-    stroke(255, 0, 0)
-    fill(255, 0, 0)}  
-    else {stroke(0, 255, 0)
-      fill(0, 0, 0)
-    }
  
   rectMode(CENTER);
-  translate(100, 100)
   //draw_symbol()
-  draw_customshape()
+  stroke(255, 255, 255)
+  fill(176, 47, 13)
+  draw_custom1()
+  stroke(255, 255, 255)
+  fill(206, 58, 15)
+  draw_custom2()
+  stroke(255, 255, 255)
+  fill(235, 69, 17)
+  draw_custom3()
 }
 
-function draw_symbol(){
-    push()
-  rotate(90)
-  rect(rect_x+10, rect_y, rect_width, rect_height)
-  pop()
-  push()
-  rotate(210)
-  rect(rect_x, rect_y, rect_width, rect_height)
-  pop()
-  push()
-  rotate(330)
-  rect(rect_x, rect_y, rect_width, rect_height)
-  pop()
-  circle(0, 0, circle_height)
-  
-}
 
-function draw_customshape(){
-  translate(-85, -100)
-  fill(0, 255, 0)
+
+function draw_custom1(){
   beginShape();
-  vertex(0, 28.87);
-  vertex(50, 0);
-  vertex(86.6, 21.14);
-  vertex(123.2, 0);
-  vertex(173.2, 28.87);
-  vertex(123.2, 57.74);
-  vertex(86, 78.87);
-  vertex(50, 57.74);
-  vertex(0, 28.87);
+  vertex(1.73, 29.29);
+  vertex(51.64, .48);
+  vertex(99.99, 28.39);
+  vertex(148.36, .48);
+  vertex(198.27, 29.29);
+  vertex(148.36, 58.11);
+  vertex(99.99, 86.04);
+  vertex(51.64, 58.11);
+  vertex(1.73, 29.29);
+  endShape(CLOSE);
+}
+
+function draw_custom2(){
+  beginShape();
+  vertex(99.98, 199.52);
+  vertex(50.08, 170.69);
+  vertex(50.08, 114.87);
+  vertex(1.72, 86.93);
+  vertex(1.71, 29.31);
+  vertex(51.63, 58.12);
+  vertex(100, 86.04);
+  vertex(99.99, 141.88);
+  vertex(99.98, 199.52);
+  endShape(CLOSE);
+}
+
+function draw_custom3(){
+  beginShape();
+  vertex(100.02, 199.51);
+  vertex(149.92, 170.68);
+  vertex(149.92, 114.86);
+  vertex(198.28, 86.92);
+  vertex(198.29, 29.3);
+  vertex(148.37, 58.11);
+  vertex(100, 86.03);
+  vertex(100.01, 141.87);
+  vertex(100.02, 199.51);
   endShape(CLOSE);
 }
