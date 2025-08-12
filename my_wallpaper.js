@@ -41,8 +41,6 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   draw_custom7()
 }
 
-
-
 function draw_custom1(){
   beginShape();
   vertex(260.16, 150.83);
@@ -79,7 +77,6 @@ function draw_custom3(){
   endShape(CLOSE);
 }
 
-
 function draw_custom5(){
   beginShape();
   vertex(173.56, 0)
@@ -106,8 +103,6 @@ function draw_custom6(){
   vertex(347.12, 300.62)
   endShape(CLOSE)
 }
-
-
 
 function draw_custom7(){
   beginShape();
