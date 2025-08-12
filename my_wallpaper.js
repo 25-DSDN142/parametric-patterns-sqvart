@@ -35,6 +35,8 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   stroke(255, 255, 255)
   fill(235, 69, 17)
   draw_custom3()
+  fill(153, 33, 10)
+  draw_hex()
 }
 
 
@@ -80,3 +82,24 @@ function draw_custom3(){
   vertex(100.02, 199.51);
   endShape(CLOSE);
 }
+
+
+function draw_hex(){
+  beginShape();
+  vertex(246.92, 170.87)
+  vertex(246.92, 114.86)
+  vertex(197.42, 86.86)
+  vertex(149.92, 114.86)
+  vertex(149.92, 170.87)
+  vertex(198.42, 198.87)
+  vertex(246.92, 170.87)
+  endShape(CLOSE)
+}
+
+
+
+
+
+
+
+
