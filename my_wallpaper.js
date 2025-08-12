@@ -13,9 +13,9 @@ function setup_wallpaper(pWallpaper) {
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
-  pWallpaper.grid_settings.cell_width  = 347.12 ;
-  pWallpaper.grid_settings.cell_height = 301 ;
-  pWallpaper.grid_settings.row_offset  = 173.5;
+  pWallpaper.grid_settings.cell_width  = 347 ;
+  pWallpaper.grid_settings.cell_height = 300 ;
+  pWallpaper.grid_settings.row_offset  = 173;
 }
 
 function wallpaper_background() {
