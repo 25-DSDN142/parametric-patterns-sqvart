@@ -1,9 +1,9 @@
 //your parameter variables go here!
-let rect_y= 0;
-let rect_width  = 300;
-let rect_height = 20;
-let circle_width = 25;
-let circle_height= 25;
+let bgRed = 240;
+let bgGreen = 255;
+let bgBlue = 240;
+let useAltColors = true;
+let shapeScale = 1.0;
 
 function setup_wallpaper(pWallpaper) {
   //pWallpaper.output_mode(DEVELOP_GLYPH);
@@ -20,6 +20,11 @@ function setup_wallpaper(pWallpaper) {
 
 function wallpaper_background() {
   background(240, 255, 240); //light honeydew green colour
+  if (useAltColors) {
+    background(bgRed, bgGreen, bgBlue); // honeydew green
+  } else {
+    background(200, 230, 255); // light blue
+  }
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
