@@ -5,11 +5,16 @@ let bgBlue = 240;
 let useAltColors = true;
 let shapeScale = 1.0;
 
+let fillColor1 = [170, 255, 66];  
+let fillColor2 = [100, 216, 68];  
+let fillColor3 = [30, 176, 69];   
+
 function setup_wallpaper(pWallpaper) {
   //pWallpaper.output_mode(DEVELOP_GLYPH);
   pWallpaper.output_mode(GRID_WALLPAPER);
   
-  pWallpaper.resolution(FIT_TO_SCREEN);
+  
+  pWallpaper.resolution(A3);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
@@ -30,20 +35,25 @@ function wallpaper_background() {
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
  
   rectMode(CENTER);
-  //draw_symbol()
   noStroke()
-  fill(239, 169, 10)
-  draw_custom1()
-  fill(238, 144, 11)
-  draw_custom2()
-  fill(237, 119, 12)
-  draw_custom3()
-  fill(238, 144, 11)
-  draw_custom5()
-  fill(239, 169, 10)
-  draw_custom6()
-  fill(237, 119, 12)
-  draw_custom7()
+
+  fill(...fillColor1);
+  draw_custom1();
+
+  fill(...fillColor2);
+  draw_custom2();
+
+  fill(...fillColor3);
+  draw_custom3();
+
+  fill(...fillColor2);
+  draw_custom5();
+
+  fill(...fillColor1);
+  draw_custom6();
+
+  fill(...fillColor3);
+  draw_custom7();
 }
 
 function draw_custom1(){
